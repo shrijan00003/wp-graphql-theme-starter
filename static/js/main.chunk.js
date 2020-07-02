@@ -939,7 +939,7 @@ const MainLayout = ({
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bg-dark text-white",
     style: {
-      height: "100vh"
+      minHeight: "100vh"
     },
     __self: undefined,
     __source: {
@@ -1749,5 +1749,5 @@ module.exports = __webpack_require__(/*! /Users/shrijantripathi/projects/startup
 
 /***/ })
 
-},[[0,"runtime-main",0]]]);
+},[[0,"runtime-main",1]]]);
 //# sourceMappingURL=main.chunk.js.map
