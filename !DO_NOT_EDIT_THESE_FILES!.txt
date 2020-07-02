@@ -1,0 +1,3 @@
+Instead, edit the files in the "react-src/src" and "react-src/public" folders.
+These files are overwritten by Webpack every time you make edits to the files in those folders.
+You will lose all changes made to these files when that happens.
