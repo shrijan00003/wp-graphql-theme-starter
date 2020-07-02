@@ -9377,13 +9377,49 @@ export type Get_PostsQuery = (
                     node?: Maybe<
                       (
                         & { __typename?: "Post" }
-                        & Pick<Post, "id" | "title" | "date" | "excerpt">
+                        & Pick<
+                          Post,
+                          "id" | "slug" | "date" | "title" | "excerpt"
+                        >
                       )
                     >;
                   }
                 )
               >
             >
+          >;
+        }
+      )
+    >;
+  }
+);
+
+export type Get_PostQueryVariables = Exact<{
+  id: Scalars["ID"];
+}>;
+
+export type Get_PostQuery = (
+  & { __typename?: "RootQuery" }
+  & {
+    post?: Maybe<
+      (
+        & { __typename?: "Post" }
+        & Pick<Post, "id" | "postId" | "title" | "date" | "uri" | "content">
+        & {
+          featuredImage?: Maybe<
+            (
+              & {
+                __typename?: "NodeWithFeaturedImageToMediaItemConnectionEdge";
+              }
+              & {
+                node?: Maybe<
+                  (
+                    & { __typename?: "MediaItem" }
+                    & Pick<MediaItem, "uri" | "slug" | "sourceUrl">
+                  )
+                >;
+              }
+            )
           >;
         }
       )
@@ -9404,8 +9440,9 @@ export const Get_PostsDocument = gql`
       cursor
       node {
         id
-        title
+        slug
         date
+        title
         excerpt
       }
     }
@@ -9508,4 +9545,116 @@ export type Get_PostsLazyQueryHookResult = ReturnType<
 export type Get_PostsQueryResult = ApolloReactCommon.QueryResult<
   Get_PostsQuery,
   Get_PostsQueryVariables
+>;
+export const Get_PostDocument = gql`
+    query GET_POST($id: ID!) {
+  post(id: $id) {
+    id
+    postId
+    title
+    date
+    uri
+    content
+    featuredImage {
+      node {
+        uri
+        slug
+        sourceUrl
+      }
+    }
+  }
+}
+    `;
+export type Get_PostComponentProps =
+  & Omit<
+    ApolloReactComponents.QueryComponentOptions<
+      Get_PostQuery,
+      Get_PostQueryVariables
+    >,
+    "query"
+  >
+  & ({ variables: Get_PostQueryVariables; skip?: boolean } | { skip: boolean });
+
+export const Get_PostComponent = (props: Get_PostComponentProps) => (
+  <ApolloReactComponents.Query<Get_PostQuery, Get_PostQueryVariables>
+    query={Get_PostDocument}
+    {...props}
+  />
+);
+
+export type Get_PostProps<TChildProps = {}, TDataName extends string = "data"> =
+  & {
+    [key in TDataName]: ApolloReactHoc.DataValue<
+      Get_PostQuery,
+      Get_PostQueryVariables
+    >;
+  }
+  & TChildProps;
+export function withGet_Post<
+  TProps,
+  TChildProps = {},
+  TDataName extends string = "data",
+>(
+  operationOptions?: ApolloReactHoc.OperationOption<
+    TProps,
+    Get_PostQuery,
+    Get_PostQueryVariables,
+    Get_PostProps<TChildProps, TDataName>
+  >,
+) {
+  return ApolloReactHoc.withQuery<
+    TProps,
+    Get_PostQuery,
+    Get_PostQueryVariables,
+    Get_PostProps<TChildProps, TDataName>
+  >(Get_PostDocument, {
+    alias: "getPost",
+    ...operationOptions,
+  });
+}/**
+ * __useGet_PostQuery__
+ *
+ * To run a query within a React component, call `useGet_PostQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGet_PostQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGet_PostQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+
+export function useGet_PostQuery(
+  baseOptions?: ApolloReactHooks.QueryHookOptions<
+    Get_PostQuery,
+    Get_PostQueryVariables
+  >,
+) {
+  return ApolloReactHooks.useQuery<Get_PostQuery, Get_PostQueryVariables>(
+    Get_PostDocument,
+    baseOptions,
+  );
+}
+export function useGet_PostLazyQuery(
+  baseOptions?: ApolloReactHooks.LazyQueryHookOptions<
+    Get_PostQuery,
+    Get_PostQueryVariables
+  >,
+) {
+  return ApolloReactHooks.useLazyQuery<Get_PostQuery, Get_PostQueryVariables>(
+    Get_PostDocument,
+    baseOptions,
+  );
+}
+export type Get_PostQueryHookResult = ReturnType<typeof useGet_PostQuery>;
+export type Get_PostLazyQueryHookResult = ReturnType<
+  typeof useGet_PostLazyQuery
+>;
+export type Get_PostQueryResult = ApolloReactCommon.QueryResult<
+  Get_PostQuery,
+  Get_PostQueryVariables
 >;

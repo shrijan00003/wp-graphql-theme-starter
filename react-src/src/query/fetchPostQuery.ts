@@ -13,9 +13,30 @@ query GET_POSTS($first: Int, $after: String,$last: Int, $before: String) {
       cursor
       node {
         id
-        title
+        slug
         date
+        title
         excerpt
+      }
+    }
+  }
+}
+`;
+
+export const FETCH_SINGLE_POST = gql`
+query GET_POST($id: ID!) {
+  post(id: $id) {
+    id
+    postId
+    title
+    date
+    uri,
+    content,
+    featuredImage{
+      node{
+        uri
+        slug
+        sourceUrl
       }
     }
   }

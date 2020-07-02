@@ -1,10 +1,10 @@
 import React from "react";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
+
 import Main from "./main";
-import Pages from "../templates/pages";
 import Posts from "../templates/posts";
-import SinglePage from "../templates/page-single";
-import SinglePost from "../templates/post-single";
+import Pages from "../templates/pages";
+import SinglePost from "../post/single.post";
 
 const AppRoute = () => {
   return (
@@ -13,8 +13,8 @@ const AppRoute = () => {
         <Route exact path="/" component={Main} />
         <Route exact path="/pages" component={Pages} />
         <Route exact path="/posts" component={Posts} />
-        <Route exact path="/pages/:slug" component={SinglePage} />
-        <Route exact path="/posts/:slug" component={SinglePost} />
+        <Route exact path="/pages/:slug" component={SinglePost} />
+        <Route exact path="/posts/:id/:slug" component={SinglePost} />
       </Switch>
     </BrowserRouter>
   );

@@ -1,27 +1,14 @@
 import React, { useState } from "react";
-import MainLayout from "../layout/main.layout";
 
 import {
   useGet_PostsQuery as useGetPostQuery,
 } from "../generated/graphql";
 
-import { PostVariable } from "../app/app.types";
-import PostCard from "../post/post.card";
 import Spinner from "../common/spinner";
+import PostCard from "../post/post.card";
+import MainLayout from "../layout/main.layout";
+import { PostVariable } from "../app/app.types";
 
-/**
- * This page is designed for the posts collection
- * We will be implementing pagination then after
- * TODO:
- * 1. Display posts on card
- * 2. Implement pagination
- * - there have to be two queries one for getting post with first and after
- *  - at front page first = 10 , last will be null
- *  - when next will be clicked then first will be same but the last will have curser
- * 
- * - another query for getting posts with last and before 
- * 
- */
 const initialPostVariable: PostVariable = {
   first: 5,
   after: null,

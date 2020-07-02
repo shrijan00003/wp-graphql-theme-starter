@@ -13,12 +13,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./main */ "./src/app/main.tsx");
-/* harmony import */ var _templates_pages__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../templates/pages */ "./src/templates/pages.tsx");
-/* harmony import */ var _templates_posts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../templates/posts */ "./src/templates/posts.tsx");
-/* harmony import */ var _templates_page_single__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../templates/page-single */ "./src/templates/page-single.tsx");
-/* harmony import */ var _templates_post_single__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../templates/post-single */ "./src/templates/post-single.tsx");
+/* harmony import */ var _templates_posts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../templates/posts */ "./src/templates/posts.tsx");
+/* harmony import */ var _templates_pages__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../templates/pages */ "./src/templates/pages.tsx");
+/* harmony import */ var _post_single_post__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../post/single.post */ "./src/post/single.post.tsx");
 var _jsxFileName = "/Users/shrijantripathi/projects/startup/ltf/ltf-blog/wp-content/themes/ltfgraphql/react-src/src/app/app.route.tsx";
-
 
 
 
@@ -54,7 +52,7 @@ const AppRoute = () => {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/pages",
-    component: _templates_pages__WEBPACK_IMPORTED_MODULE_3__["default"],
+    component: _templates_pages__WEBPACK_IMPORTED_MODULE_4__["default"],
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -64,7 +62,7 @@ const AppRoute = () => {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/posts",
-    component: _templates_posts__WEBPACK_IMPORTED_MODULE_4__["default"],
+    component: _templates_posts__WEBPACK_IMPORTED_MODULE_3__["default"],
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -74,7 +72,7 @@ const AppRoute = () => {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/pages/:slug",
-    component: _templates_page_single__WEBPACK_IMPORTED_MODULE_5__["default"],
+    component: _post_single_post__WEBPACK_IMPORTED_MODULE_5__["default"],
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -83,8 +81,8 @@ const AppRoute = () => {
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
-    path: "/posts/:slug",
-    component: _templates_post_single__WEBPACK_IMPORTED_MODULE_6__["default"],
+    path: "/posts/:id/:slug",
+    component: _post_single_post__WEBPACK_IMPORTED_MODULE_5__["default"],
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -263,7 +261,7 @@ const Spinner = () => {
 /*!***********************************!*\
   !*** ./src/generated/graphql.tsx ***!
   \***********************************/
-/*! exports provided: TermObjectsConnectionOrderbyEnum, PostObjectsConnectionDateColumnEnum, RelationEnum, MimeTypeEnum, PostObjectsConnectionOrderbyEnum, OrderEnum, PostStatusEnum, AvatarRatingEnum, ContentTypeEnum, CommentsConnectionOrderbyEnum, PostObjectFieldFormatEnum, MediaItemSizeEnum, TaxonomyEnum, CategoryIdType, ContentNodeIdTypeEnum, ContentTypeIdTypeEnum, MediaItemIdType, MenuNodeIdTypeEnum, MenuLocationEnum, MenuItemNodeIdTypeEnum, PageIdType, PostIdType, PostFormatIdType, TagIdType, TaxonomyIdTypeEnum, TermNodeIdTypeEnum, UserNodeIdTypeEnum, UsersConnectionOrderbyEnum, UserRoleEnum, MediaItemStatusEnum, Get_PostsDocument, Get_PostsComponent, withGet_Posts, useGet_PostsQuery, useGet_PostsLazyQuery */
+/*! exports provided: TermObjectsConnectionOrderbyEnum, PostObjectsConnectionDateColumnEnum, RelationEnum, MimeTypeEnum, PostObjectsConnectionOrderbyEnum, OrderEnum, PostStatusEnum, AvatarRatingEnum, ContentTypeEnum, CommentsConnectionOrderbyEnum, PostObjectFieldFormatEnum, MediaItemSizeEnum, TaxonomyEnum, CategoryIdType, ContentNodeIdTypeEnum, ContentTypeIdTypeEnum, MediaItemIdType, MenuNodeIdTypeEnum, MenuLocationEnum, MenuItemNodeIdTypeEnum, PageIdType, PostIdType, PostFormatIdType, TagIdType, TaxonomyIdTypeEnum, TermNodeIdTypeEnum, UserNodeIdTypeEnum, UsersConnectionOrderbyEnum, UserRoleEnum, MediaItemStatusEnum, Get_PostsDocument, Get_PostsComponent, withGet_Posts, useGet_PostsQuery, useGet_PostsLazyQuery, Get_PostDocument, Get_PostComponent, withGet_Post, useGet_PostQuery, useGet_PostLazyQuery */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -303,6 +301,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withGet_Posts", function() { return withGet_Posts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useGet_PostsQuery", function() { return useGet_PostsQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useGet_PostsLazyQuery", function() { return useGet_PostsLazyQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Get_PostDocument", function() { return Get_PostDocument; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Get_PostComponent", function() { return Get_PostComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withGet_Post", function() { return withGet_Post; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useGet_PostQuery", function() { return useGet_PostQuery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useGet_PostLazyQuery", function() { return useGet_PostLazyQuery; });
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graphql-tag */ "./node_modules/graphql-tag/src/index.js");
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -758,8 +761,9 @@ const Get_PostsDocument = graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
       cursor
       node {
         id
-        title
+        slug
         date
+        title
         excerpt
       }
     }
@@ -772,7 +776,7 @@ const Get_PostsComponent = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9424,
+    lineNumber: 9461,
     columnNumber: 3
   }
 }));
@@ -807,6 +811,64 @@ function useGet_PostsQuery(baseOptions) {
 }
 function useGet_PostsLazyQuery(baseOptions) {
   return _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__["useLazyQuery"](Get_PostsDocument, baseOptions);
+}
+const Get_PostDocument = graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
+    query GET_POST($id: ID!) {
+  post(id: $id) {
+    id
+    postId
+    title
+    date
+    uri
+    content
+    featuredImage {
+      node {
+        uri
+        slug
+        sourceUrl
+      }
+    }
+  }
+}
+    `;
+const Get_PostComponent = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_apollo_react_components__WEBPACK_IMPORTED_MODULE_2__["Query"], Object.assign({
+  query: Get_PostDocument
+}, props, {
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 9579,
+    columnNumber: 3
+  }
+}));
+function withGet_Post(operationOptions) {
+  return _apollo_react_hoc__WEBPACK_IMPORTED_MODULE_3__["withQuery"](Get_PostDocument, {
+    alias: "getPost",
+    ...operationOptions
+  });
+}
+/**
+* __useGet_PostQuery__
+*
+* To run a query within a React component, call `useGet_PostQuery` and pass it any options that fit your needs.
+* When your component renders, `useGet_PostQuery` returns an object from Apollo Client that contains loading, error, and data properties
+* you can use to render your UI.
+*
+* @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+*
+* @example
+* const { data, loading, error } = useGet_PostQuery({
+*   variables: {
+*      id: // value for 'id'
+*   },
+* });
+*/
+
+function useGet_PostQuery(baseOptions) {
+  return _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__["useQuery"](Get_PostDocument, baseOptions);
+}
+function useGet_PostLazyQuery(baseOptions) {
+  return _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__["useLazyQuery"](Get_PostDocument, baseOptions);
 }
 
 /***/ }),
@@ -864,8 +926,8 @@ _serviceWorker__WEBPACK_IMPORTED_MODULE_2__["unregister"]();
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _partials_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/header */ "./src/partials/header.tsx");
-/* harmony import */ var _partials_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/footer */ "./src/partials/footer.tsx");
+/* harmony import */ var _partials_footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/footer */ "./src/partials/footer.tsx");
+/* harmony import */ var _partials_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/header */ "./src/partials/header.tsx");
 var _jsxFileName = "/Users/shrijantripathi/projects/startup/ltf/ltf-blog/wp-content/themes/ltfgraphql/react-src/src/layout/main.layout.tsx";
 
 
@@ -882,14 +944,14 @@ const MainLayout = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 8,
       columnNumber: 5
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials_header__WEBPACK_IMPORTED_MODULE_1__["Header"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials_header__WEBPACK_IMPORTED_MODULE_2__["Header"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 9,
       columnNumber: 7
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -897,14 +959,14 @@ const MainLayout = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 10,
       columnNumber: 7
     }
-  }, children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials_footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials_footer__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 13,
       columnNumber: 7
     }
   }));
@@ -1091,7 +1153,9 @@ const Header = () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 var _jsxFileName = "/Users/shrijantripathi/projects/startup/ltf/ltf-blog/wp-content/themes/ltfgraphql/react-src/src/post/post.card.tsx";
+
 
 
 const PostCard = ({
@@ -1104,7 +1168,7 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 12,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1112,7 +1176,7 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 13,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1120,7 +1184,7 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 14,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -1129,7 +1193,7 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 15,
       columnNumber: 11
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1137,7 +1201,7 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 17,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1145,18 +1209,26 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 18,
       columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: `/posts/${node === null || node === void 0 ? void 0 : node.id}/${node === null || node === void 0 ? void 0 : node.slug}`,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
     className: "card-title",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 13
+      lineNumber: 20,
+      columnNumber: 15
     }
-  }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "card-text",
     dangerouslySetInnerHTML: {
       __html: excerpt
@@ -1164,7 +1236,7 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 22,
       columnNumber: 13
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -1172,7 +1244,7 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 26,
       columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
@@ -1180,13 +1252,161 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 27,
       columnNumber: 15
     }
   }, "Last updated 3 mins ago"))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PostCard);
+
+/***/ }),
+
+/***/ "./src/post/single.post.tsx":
+/*!**********************************!*\
+  !*** ./src/post/single.post.tsx ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _layout_main_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../layout/main.layout */ "./src/layout/main.layout.tsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _common_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/spinner */ "./src/common/spinner.tsx");
+/* harmony import */ var _generated_graphql__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../generated/graphql */ "./src/generated/graphql.tsx");
+var _jsxFileName = "/Users/shrijantripathi/projects/startup/ltf/ltf-blog/wp-content/themes/ltfgraphql/react-src/src/post/single.post.tsx";
+
+
+
+
+
+
+const SinglePost = () => {
+  var _data$post, _data$post$featuredIm, _data$post$featuredIm2, _data$post2, _data$post3;
+
+  const {
+    id
+  } = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["useParams"])();
+  const {
+    loading,
+    error,
+    data
+  } = Object(_generated_graphql__WEBPACK_IMPORTED_MODULE_4__["useGet_PostQuery"])({
+    variables: {
+      id
+    }
+  });
+
+  if (loading) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_common_spinner__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17,
+        columnNumber: 12
+      }
+    });
+  }
+
+  if (error) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21,
+        columnNumber: 12
+      }
+    }, "ERROR");
+  }
+
+  const featuredImage = data === null || data === void 0 ? void 0 : (_data$post = data.post) === null || _data$post === void 0 ? void 0 : (_data$post$featuredIm = _data$post.featuredImage) === null || _data$post$featuredIm === void 0 ? void 0 : (_data$post$featuredIm2 = _data$post$featuredIm.node) === null || _data$post$featuredIm2 === void 0 ? void 0 : _data$post$featuredIm2.sourceUrl;
+  const postTitle = data === null || data === void 0 ? void 0 : (_data$post2 = data.post) === null || _data$post2 === void 0 ? void 0 : _data$post2.title;
+  const content = data === null || data === void 0 ? void 0 : (_data$post3 = data.post) === null || _data$post3 === void 0 ? void 0 : _data$post3.content;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_main_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card bg-dark",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 7
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: featuredImage,
+    className: "card-img-top",
+    alt: "...",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
+      columnNumber: 9
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-body",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "card-title py-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 11
+    }
+  }, postTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "card-text",
+    dangerouslySetInnerHTML: {
+      __html: content
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33,
+      columnNumber: 11
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-body",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/posts",
+    className: "card-link",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 11
+    }
+  }, "All Posts"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/",
+    className: "card-link",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 11
+    }
+  }, "Home Page"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SinglePost);
 
 /***/ }),
 
@@ -1293,35 +1513,6 @@ function unregister() {
 
 /***/ }),
 
-/***/ "./src/templates/page-single.tsx":
-/*!***************************************!*\
-  !*** ./src/templates/page-single.tsx ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/shrijantripathi/projects/startup/ltf/ltf-blog/wp-content/themes/ltfgraphql/react-src/src/templates/page-single.tsx";
-
-
-const SinglePage = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5,
-      columnNumber: 5
-    }
-  }, "This is SinglePage single");
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (SinglePage);
-
-/***/ }),
-
 /***/ "./src/templates/pages.tsx":
 /*!*********************************!*\
   !*** ./src/templates/pages.tsx ***!
@@ -1351,35 +1542,6 @@ const Pages = () => {
 
 /***/ }),
 
-/***/ "./src/templates/post-single.tsx":
-/*!***************************************!*\
-  !*** ./src/templates/post-single.tsx ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/shrijantripathi/projects/startup/ltf/ltf-blog/wp-content/themes/ltfgraphql/react-src/src/templates/post-single.tsx";
-
-
-const SinglePost = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5,
-      columnNumber: 5
-    }
-  }, "post single");
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (SinglePost);
-
-/***/ }),
-
 /***/ "./src/templates/posts.tsx":
 /*!*********************************!*\
   !*** ./src/templates/posts.tsx ***!
@@ -1391,29 +1553,15 @@ const SinglePost = () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _layout_main_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../layout/main.layout */ "./src/layout/main.layout.tsx");
-/* harmony import */ var _generated_graphql__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../generated/graphql */ "./src/generated/graphql.tsx");
+/* harmony import */ var _generated_graphql__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../generated/graphql */ "./src/generated/graphql.tsx");
+/* harmony import */ var _common_spinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common/spinner */ "./src/common/spinner.tsx");
 /* harmony import */ var _post_post_card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../post/post.card */ "./src/post/post.card.tsx");
-/* harmony import */ var _common_spinner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../common/spinner */ "./src/common/spinner.tsx");
+/* harmony import */ var _layout_main_layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../layout/main.layout */ "./src/layout/main.layout.tsx");
 var _jsxFileName = "/Users/shrijantripathi/projects/startup/ltf/ltf-blog/wp-content/themes/ltfgraphql/react-src/src/templates/posts.tsx";
 
 
 
 
-
-/**
- * This page is designed for the posts collection
- * We will be implementing pagination then after
- * TODO:
- * 1. Display posts on card
- * 2. Implement pagination
- * - there have to be two queries one for getting post with first and after
- *  - at front page first = 10 , last will be null
- *  - when next will be clicked then first will be same but the last will have curser
- * 
- * - another query for getting posts with last and before 
- * 
- */
 
 const initialPostVariable = {
   first: 5,
@@ -1430,7 +1578,7 @@ const Posts = () => {
     data,
     error,
     loading
-  } = Object(_generated_graphql__WEBPACK_IMPORTED_MODULE_2__["useGet_PostsQuery"])({
+  } = Object(_generated_graphql__WEBPACK_IMPORTED_MODULE_1__["useGet_PostsQuery"])({
     variables: {
       last: postVariable === null || postVariable === void 0 ? void 0 : postVariable.last,
       first: postVariable === null || postVariable === void 0 ? void 0 : postVariable.first,
@@ -1440,11 +1588,11 @@ const Posts = () => {
   });
 
   if (loading) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_common_spinner__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_common_spinner__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47,
+        lineNumber: 34,
         columnNumber: 12
       }
     });
@@ -1455,7 +1603,7 @@ const Posts = () => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51,
+        lineNumber: 38,
         columnNumber: 12
       }
     }, "ERROR");
@@ -1472,7 +1620,7 @@ const Posts = () => {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59,
+          lineNumber: 46,
           columnNumber: 14
         }
       }, "NO DATA");
@@ -1484,7 +1632,7 @@ const Posts = () => {
           __self: undefined,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 62,
+            lineNumber: 49,
             columnNumber: 16
           }
         });
@@ -1525,7 +1673,7 @@ const Posts = () => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94,
+        lineNumber: 81,
         columnNumber: 7
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -1533,7 +1681,7 @@ const Posts = () => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95,
+        lineNumber: 82,
         columnNumber: 9
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -1541,7 +1689,7 @@ const Posts = () => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96,
+        lineNumber: 83,
         columnNumber: 11
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1551,7 +1699,7 @@ const Posts = () => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 97,
+        lineNumber: 84,
         columnNumber: 13
       }
     }, "Previous")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -1559,7 +1707,7 @@ const Posts = () => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105,
+        lineNumber: 92,
         columnNumber: 11
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1569,17 +1717,17 @@ const Posts = () => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106,
+        lineNumber: 93,
         columnNumber: 13
       }
     }, "Next"))));
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_main_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_main_layout__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120,
+      lineNumber: 107,
       columnNumber: 5
     }
   }, postCards(), pagination());
@@ -1601,5 +1749,5 @@ module.exports = __webpack_require__(/*! /Users/shrijantripathi/projects/startup
 
 /***/ })
 
-},[[0,"runtime-main",1]]]);
+},[[0,"runtime-main",0]]]);
 //# sourceMappingURL=main.chunk.js.map
