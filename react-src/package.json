@@ -1,58 +1,61 @@
 {
-    "name": "ltfgraphql",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "@devloco/react-scripts-wptheme": "^3.4.1-wp.1",
-        "@testing-library/jest-dom": "^4.2.4",
-        "@testing-library/react": "^9.3.2",
-        "@testing-library/user-event": "^7.1.2",
-        "@types/jest": "^24.0.0",
-        "@types/node": "^12.0.0",
-        "@types/react": "^16.9.0",
-        "@types/react-dom": "^16.9.0",
-        "apollo-boost": "^0.4.9",
-        "graphql": "^15.2.0",
-        "graphql-tag": "^2.10.3",
-        "react": "^16.13.1",
-        "react-apollo": "^3.1.5",
-        "react-apollo-hooks": "^0.5.0",
-        "react-dom": "^16.13.1",
-        "typescript": "~3.7.2"
-    },
-    "scripts": {
-        "crabuild": "react-scripts build",
-        "craeject": "react-scripts eject",
-        "crastart": "react-scripts start",
-        "cratest": "react-scripts test",
-        "build": "wptheme-scripts build",
-        "start": "wptheme-scripts start",
-        "wpbuild": "wptheme-scripts wpbuild",
-        "wpstart": "wptheme-scripts wpstart",
-        "codegen": "graphql-codegen --config codegen.yml"
-    },
-    "eslintConfig": {
-        "extends": "react-app"
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "homepage": "/wp-content/themes/ltfgraphql",
-    "browserLaunchTo": "http://localhost:8000",
-    "devDependencies": {
-        "@graphql-codegen/cli": "1.16.0",
-        "@graphql-codegen/typescript": "1.16.0",
-        "@graphql-codegen/typescript-operations": "1.16.0",
-        "@graphql-codegen/typescript-react-apollo": "1.16.0",
-        "@graphql-codegen/introspection": "1.16.0"
-    }
+  "name": "ltfgraphql",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@devloco/react-scripts-wptheme": "^3.4.1-wp.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-router-dom": "^5.1.5",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.2.0",
+    "graphql-tag": "^2.10.3",
+    "react": "^16.13.1",
+    "react-apollo": "^3.1.5",
+    "react-apollo-hooks": "^0.5.0",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "typescript": "~3.7.2"
+  },
+  "scripts": {
+    "crabuild": "react-scripts build",
+    "craeject": "react-scripts eject",
+    "crastart": "react-scripts start",
+    "cratest": "react-scripts test",
+    "build": "wptheme-scripts build",
+    "start": "wptheme-scripts start",
+    "wpbuild": "wptheme-scripts wpbuild",
+    "wpstart": "wptheme-scripts wpstart",
+    "codegen": "graphql-codegen --config codegen.yml"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "/wp-content/themes/ltfgraphql",
+  "browserLaunchTo": "http://localhost:8000",
+  "devDependencies": {
+    "@graphql-codegen/cli": "1.16.0",
+    "@graphql-codegen/introspection": "1.16.0",
+    "@graphql-codegen/typescript": "1.16.0",
+    "@graphql-codegen/typescript-operations": "1.16.0",
+    "@graphql-codegen/typescript-react-apollo": "1.16.0",
+    "@graphql-codegen/typescript-resolvers": "1.16.0"
+  }
 }

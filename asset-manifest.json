@@ -8,8 +8,7 @@
     "main.js.map": "/wp-content/themes/ltfgraphql/static/js/main.chunk.js.map",
     "runtime-main.js": "/wp-content/themes/ltfgraphql/static/js/bundle.js",
     "runtime-main.js.map": "/wp-content/themes/ltfgraphql/static/js/bundle.js.map",
-    "index.php": "/wp-content/themes/ltfgraphql/index.php",
-    "static/media/logo.svg": "/wp-content/themes/ltfgraphql/static/media/logo.5d5d9eef.svg"
+    "index.php": "/wp-content/themes/ltfgraphql/index.php"
   },
   "entrypoints": [
     "static/js/bundle.js",

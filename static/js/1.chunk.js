@@ -1,4 +1,4 @@
-(this["webpackJsonpltfgraphql"] = this["webpackJsonpltfgraphql"] || []).push([[0],{
+(this["webpackJsonpltfgraphql"] = this["webpackJsonpltfgraphql"] || []).push([[1],{
 
 /***/ "./node_modules/@apollo/react-common/lib/react-common.esm.js":
 /*!*******************************************************************!*\
@@ -54904,4 +54904,4 @@ if (hasSymbols()) {
 /***/ })
 
 }]);
-//# sourceMappingURL=0.chunk.js.map
+//# sourceMappingURL=1.chunk.js.map
