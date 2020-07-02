@@ -9381,6 +9381,24 @@ export type Get_PostsQuery = (
                           Post,
                           "id" | "slug" | "date" | "title" | "excerpt"
                         >
+                        & {
+                          featuredImage?: Maybe<
+                            (
+                              & {
+                                __typename?:
+                                  "NodeWithFeaturedImageToMediaItemConnectionEdge";
+                              }
+                              & {
+                                node?: Maybe<
+                                  (
+                                    & { __typename?: "MediaItem" }
+                                    & Pick<MediaItem, "sourceUrl">
+                                  )
+                                >;
+                              }
+                            )
+                          >;
+                        }
                       )
                     >;
                   }
@@ -9444,6 +9462,11 @@ export const Get_PostsDocument = gql`
         date
         title
         excerpt
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
       }
     }
   }

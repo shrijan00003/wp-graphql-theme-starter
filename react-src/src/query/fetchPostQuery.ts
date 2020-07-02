@@ -17,6 +17,11 @@ query GET_POSTS($first: Int, $after: String,$last: Int, $before: String) {
         date
         title
         excerpt
+        featuredImage{
+          node{
+            sourceUrl
+          }
+        }
       }
     }
   }

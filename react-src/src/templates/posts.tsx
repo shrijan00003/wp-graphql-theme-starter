@@ -78,11 +78,11 @@ const Posts = () => {
 
   const pagination = () => {
     return (
-      <nav aria-label="Page navigation bg-dark">
+      <nav aria-label="Page navigation">
         <ul className="pagination">
           <li className="page-item">
             <button
-              className="page-link"
+              className="page-link bg-dark"
               onClick={handlePrevious}
               disabled={!hasPrevious}
             >
@@ -91,7 +91,7 @@ const Posts = () => {
           </li>
           <li className="page-item">
             <button
-              className="page-link"
+              className="page-link bg-dark"
               onClick={handleNext}
               disabled={!hasNext}
             >
@@ -106,7 +106,11 @@ const Posts = () => {
   return (
     <MainLayout>
       {postCards()}
-      {pagination()}
+      <div
+        className="my-4 d-flex justify-content-center"
+      >
+        {pagination()}
+      </div>
     </MainLayout>
   );
 };

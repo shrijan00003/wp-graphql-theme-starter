@@ -1,0 +1,18 @@
+.nav-link,
+.page-link,
+a {
+  color: white;
+  &:hover {
+    color: white;
+    opacity: 0.7;
+  }
+}
+
+pre {
+  padding: 2rem 2rem;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 500px;
+  border-radius: 0.5rem;
+  background-color: lighten($color: #000000, $amount: 20);
+}

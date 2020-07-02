@@ -7093,5 +7093,23 @@ button.close {
   padding: 0;
   margin: 0; }
 
+.nav-link,
+.page-link,
+a {
+  color: white; }
+  .nav-link:hover,
+  .page-link:hover,
+  a:hover {
+    color: white;
+    opacity: 0.7; }
+
+pre {
+  padding: 2rem 2rem;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 500px;
+  border-radius: 0.5rem;
+  background-color: #333333; }
+
 
 /*# sourceMappingURL=main.chunk.css.map*/

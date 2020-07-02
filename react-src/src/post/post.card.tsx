@@ -7,12 +7,18 @@ interface Props {
 const PostCard: React.FC<Props> = ({ node }) => {
   const title = node?.title;
   const excerpt = node?.excerpt;
+  const featuredImage = node?.featuredImage?.node?.sourceUrl as string;
+  const date = node?.date;
 
   return (
-    <div className="card mb-3 bg-dark">
+    <div className="card mb-3 bg-dark p-2">
       <div className="row g-0">
         <div className="col-md-4">
-          <img src="..." alt="..." />
+          <img
+            src={featuredImage}
+            alt={title}
+            className="w-100 h-100 img-thumbnail"
+          />
         </div>
         <div className="col-md-8">
           <div className="card-body">
@@ -25,7 +31,7 @@ const PostCard: React.FC<Props> = ({ node }) => {
             />
             <p className="card-text">
               <small className="text-muted">
-                Last updated 3 mins ago
+                Updated At : {date}
               </small>
             </p>
           </div>

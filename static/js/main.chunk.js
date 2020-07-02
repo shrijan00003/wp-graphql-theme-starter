@@ -765,6 +765,11 @@ const Get_PostsDocument = graphql_tag__WEBPACK_IMPORTED_MODULE_0___default.a`
         date
         title
         excerpt
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
       }
     }
   }
@@ -776,7 +781,7 @@ const Get_PostsComponent = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9461,
+    lineNumber: 9484,
     columnNumber: 3
   }
 }));
@@ -837,7 +842,7 @@ const Get_PostComponent = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9579,
+    lineNumber: 9602,
     columnNumber: 3
   }
 }));
@@ -1161,14 +1166,18 @@ var _jsxFileName = "/Users/shrijantripathi/projects/startup/ltf/ltf-blog/wp-cont
 const PostCard = ({
   node
 }) => {
+  var _node$featuredImage, _node$featuredImage$n;
+
   const title = node === null || node === void 0 ? void 0 : node.title;
   const excerpt = node === null || node === void 0 ? void 0 : node.excerpt;
+  const featuredImage = node === null || node === void 0 ? void 0 : (_node$featuredImage = node.featuredImage) === null || _node$featuredImage === void 0 ? void 0 : (_node$featuredImage$n = _node$featuredImage.node) === null || _node$featuredImage$n === void 0 ? void 0 : _node$featuredImage$n.sourceUrl;
+  const date = node === null || node === void 0 ? void 0 : node.date;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card mb-3 bg-dark",
+    className: "card mb-3 bg-dark p-2",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 14,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1176,7 +1185,7 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 15,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1184,16 +1193,17 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 16,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "...",
-    alt: "...",
+    src: featuredImage,
+    alt: title,
+    className: "w-100 h-100 img-thumbnail",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 17,
       columnNumber: 11
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1201,7 +1211,7 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 23,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1209,7 +1219,7 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 24,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -1217,7 +1227,7 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 25,
       columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
@@ -1225,7 +1235,7 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 26,
       columnNumber: 15
     }
   }, title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -1236,7 +1246,7 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 28,
       columnNumber: 13
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -1244,7 +1254,7 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 32,
       columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
@@ -1252,10 +1262,10 @@ const PostCard = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 33,
       columnNumber: 15
     }
-  }, "Last updated 3 mins ago"))))));
+  }, "Updated At : ", date))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PostCard);
@@ -1669,7 +1679,7 @@ const Posts = () => {
 
   const pagination = () => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-      "aria-label": "Page navigation bg-dark",
+      "aria-label": "Page navigation",
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
@@ -1693,7 +1703,7 @@ const Posts = () => {
         columnNumber: 11
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "page-link",
+      className: "page-link bg-dark",
       onClick: handlePrevious,
       disabled: !hasPrevious,
       __self: undefined,
@@ -1711,7 +1721,7 @@ const Posts = () => {
         columnNumber: 11
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "page-link",
+      className: "page-link bg-dark",
       onClick: handleNext,
       disabled: !hasNext,
       __self: undefined,
@@ -1730,7 +1740,15 @@ const Posts = () => {
       lineNumber: 107,
       columnNumber: 5
     }
-  }, postCards(), pagination());
+  }, postCards(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "my-4 d-flex justify-content-center",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109,
+      columnNumber: 7
+    }
+  }, pagination()));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Posts);
