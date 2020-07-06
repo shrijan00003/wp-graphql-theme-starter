@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../asset/images/profile.png";
 
 export const Header = () => {
   return (
     <header className="container">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <Link className="navbar-brand" to="/">Learn Tech Free</Link>
+        <Link className="navbar-brand" to="/">
+          <div className="logo-wrapper">
+            <img src={Logo} alt={"Learn Tech Free"} className="w-100 h-100" />
+          </div>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,10 +26,14 @@ export const Header = () => {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="nav justify-content-end">
             <li className="nav-item">
-              <Link className="nav-link" to="/posts">Blogs</Link>
+              <Link className="nav-link" to="/posts">
+                Blogs
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/pages/contact">contact us</Link>
+              <Link className="nav-link" to="/pages/contact">
+                contact us
+              </Link>
             </li>
           </ul>
         </div>

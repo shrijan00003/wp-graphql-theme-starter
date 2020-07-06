@@ -1,18 +1,19 @@
 {
   "files": {
-    "static/js/1.chunk.js": "/wp-content/themes/ltfgraphql/static/js/1.chunk.js",
-    "static/js/1.chunk.js.map": "/wp-content/themes/ltfgraphql/static/js/1.chunk.js.map",
+    "static/js/0.chunk.js": "/wp-content/themes/ltfgraphql/static/js/0.chunk.js",
+    "static/js/0.chunk.js.map": "/wp-content/themes/ltfgraphql/static/js/0.chunk.js.map",
     "main.css": "/wp-content/themes/ltfgraphql/static/css/main.chunk.css",
     "main.js": "/wp-content/themes/ltfgraphql/static/js/main.chunk.js",
     "main.css.map": "/wp-content/themes/ltfgraphql/static/css/main.chunk.css.map",
     "main.js.map": "/wp-content/themes/ltfgraphql/static/js/main.chunk.js.map",
     "runtime-main.js": "/wp-content/themes/ltfgraphql/static/js/bundle.js",
     "runtime-main.js.map": "/wp-content/themes/ltfgraphql/static/js/bundle.js.map",
-    "index.php": "/wp-content/themes/ltfgraphql/index.php"
+    "index.php": "/wp-content/themes/ltfgraphql/index.php",
+    "static/media/profile.png": "/wp-content/themes/ltfgraphql/static/media/profile.56b6c5aa.png"
   },
   "entrypoints": [
     "static/js/bundle.js",
-    "static/js/1.chunk.js",
+    "static/js/0.chunk.js",
     "static/css/main.chunk.css",
     "static/js/main.chunk.js"
   ]

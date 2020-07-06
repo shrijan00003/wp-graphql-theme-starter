@@ -7198,5 +7198,9 @@ pre {
 code {
   padding: 1rem !important; }
 
+.logo-wrapper {
+  height: 150px;
+  width: 150px; }
+
 
 /*# sourceMappingURL=main.chunk.css.map*/

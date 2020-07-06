@@ -111,8 +111,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-apollo */ "./node_modules/react-apollo/lib/react-apollo.esm.js");
 /* harmony import */ var react_apollo_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-apollo-hooks */ "./node_modules/react-apollo-hooks/es/index.js");
 /* harmony import */ var _app_route__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.route */ "./src/app/app.route.tsx");
-/* harmony import */ var _asset_app_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../asset/app.scss */ "./src/asset/app.scss");
-/* harmony import */ var _asset_app_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_asset_app_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _asset_styles_app_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../asset/styles/app.scss */ "./src/asset/styles/app.scss");
+/* harmony import */ var _asset_styles_app_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_asset_styles_app_scss__WEBPACK_IMPORTED_MODULE_5__);
 var _jsxFileName = "/Users/shrijantripathi/projects/startup/ltf/ltf-blog/wp-content/themes/ltfgraphql/react-src/src/app/app.tsx";
 
 
@@ -190,10 +190,21 @@ const Main = () => {
 
 /***/ }),
 
-/***/ "./src/asset/app.scss":
-/*!****************************!*\
-  !*** ./src/asset/app.scss ***!
-  \****************************/
+/***/ "./src/asset/images/profile.png":
+/*!**************************************!*\
+  !*** ./src/asset/images/profile.png ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/profile.56b6c5aa.png";
+
+/***/ }),
+
+/***/ "./src/asset/styles/app.scss":
+/*!***********************************!*\
+  !*** ./src/asset/styles/app.scss ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1040,7 +1051,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _asset_images_profile_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../asset/images/profile.png */ "./src/asset/images/profile.png");
+/* harmony import */ var _asset_images_profile_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_asset_images_profile_png__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/Users/shrijantripathi/projects/startup/ltf/ltf-blog/wp-content/themes/ltfgraphql/react-src/src/partials/header.tsx";
+
 
 
 const Header = () => {
@@ -1049,7 +1063,7 @@ const Header = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 7,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
@@ -1057,7 +1071,7 @@ const Header = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 8,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -1066,10 +1080,28 @@ const Header = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 9,
       columnNumber: 9
     }
-  }, "Learn Tech Free"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "logo-wrapper",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _asset_images_profile_png__WEBPACK_IMPORTED_MODULE_2___default.a,
+    alt: "Learn Tech Free",
+    className: "w-100 h-100",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 13
+    }
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "navbar-toggler",
     type: "button",
     "data-toggle": "collapse",
@@ -1080,7 +1112,7 @@ const Header = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 14,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -1088,7 +1120,7 @@ const Header = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 23,
       columnNumber: 11
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1097,7 +1129,7 @@ const Header = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 26,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -1105,7 +1137,7 @@ const Header = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 27,
       columnNumber: 11
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -1113,7 +1145,7 @@ const Header = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 28,
       columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -1122,7 +1154,7 @@ const Header = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 29,
       columnNumber: 15
     }
   }, "Blogs")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -1130,7 +1162,7 @@ const Header = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 33,
       columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -1139,7 +1171,7 @@ const Header = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 34,
       columnNumber: 15
     }
   }, "contact us"))))));
@@ -1768,5 +1800,5 @@ module.exports = __webpack_require__(/*! /Users/shrijantripathi/projects/startup
 
 /***/ })
 
-},[[0,"runtime-main",1]]]);
+},[[0,"runtime-main",0]]]);
 //# sourceMappingURL=main.chunk.js.map

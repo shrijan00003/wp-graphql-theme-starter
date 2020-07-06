@@ -4,7 +4,7 @@ import { ApolloProvider } from "react-apollo";
 import { ApolloProvider as ApolloHooksProvider } from "react-apollo-hooks";
 import AppRoute from "./app.route";
 
-import "../asset/app.scss";
+import "../asset/styles/app.scss";
 
 const client = new ApolloClient({
   uri: "http://localhost:8000/graphql",
