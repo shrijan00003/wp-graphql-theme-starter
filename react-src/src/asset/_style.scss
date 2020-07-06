@@ -9,10 +9,14 @@ a {
 }
 
 pre {
-  padding: 2rem 2rem;
+  padding: 1rem 1rem;
   overflow-x: auto;
   overflow-y: auto;
   max-height: 500px;
   border-radius: 0.5rem;
   background-color: lighten($color: #000000, $amount: 20);
+}
+
+code {
+  padding: 1rem !important;
 }
