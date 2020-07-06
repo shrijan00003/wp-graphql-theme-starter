@@ -1,8 +1,9 @@
 import React from "react";
-import MainLayout from "../layout/main.layout";
+import Highlight from "react-highlight";
 import { useParams, Link } from "react-router-dom";
 
 import Spinner from "../common/spinner";
+import MainLayout from "../layout/main.layout";
 import { useGet_PostQuery as useGetPostQuery } from "../generated/graphql";
 
 const SinglePost = () => {
@@ -30,15 +31,18 @@ const SinglePost = () => {
         <img src={featuredImage} className="card-img-top" alt="..." />
         <div className="card-body">
           <h1 className="card-title py-2">{postTitle}</h1>
-          <p
-            className="card-text"
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
+          <Highlight innerHTML className="card-text">
+            {content}
+          </Highlight>
         </div>
 
         <div className="card-body">
-          <Link to="/posts" className="card-link">All Posts</Link>
-          <Link to="/" className="card-link">Home Page</Link>
+          <Link to="/posts" className="card-link">
+            All Posts
+          </Link>
+          <Link to="/" className="card-link">
+            Home Page
+          </Link>
         </div>
       </div>
     </MainLayout>
