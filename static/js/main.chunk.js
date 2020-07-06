@@ -1283,11 +1283,14 @@ const PostCard = ({
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _layout_main_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../layout/main.layout */ "./src/layout/main.layout.tsx");
+/* harmony import */ var react_highlight__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-highlight */ "./node_modules/react-highlight/index.js");
+/* harmony import */ var react_highlight__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_highlight__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _common_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/spinner */ "./src/common/spinner.tsx");
-/* harmony import */ var _generated_graphql__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../generated/graphql */ "./src/generated/graphql.tsx");
+/* harmony import */ var _layout_main_layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../layout/main.layout */ "./src/layout/main.layout.tsx");
+/* harmony import */ var _generated_graphql__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../generated/graphql */ "./src/generated/graphql.tsx");
 var _jsxFileName = "/Users/shrijantripathi/projects/startup/ltf/ltf-blog/wp-content/themes/ltfgraphql/react-src/src/post/single.post.tsx";
+
 
 
 
@@ -1304,7 +1307,7 @@ const SinglePost = () => {
     loading,
     error,
     data
-  } = Object(_generated_graphql__WEBPACK_IMPORTED_MODULE_4__["useGet_PostQuery"])({
+  } = Object(_generated_graphql__WEBPACK_IMPORTED_MODULE_5__["useGet_PostQuery"])({
     variables: {
       id
     }
@@ -1315,7 +1318,7 @@ const SinglePost = () => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17,
+        lineNumber: 18,
         columnNumber: 12
       }
     });
@@ -1326,7 +1329,7 @@ const SinglePost = () => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21,
+        lineNumber: 22,
         columnNumber: 12
       }
     }, "ERROR");
@@ -1335,11 +1338,11 @@ const SinglePost = () => {
   const featuredImage = data === null || data === void 0 ? void 0 : (_data$post = data.post) === null || _data$post === void 0 ? void 0 : (_data$post$featuredIm = _data$post.featuredImage) === null || _data$post$featuredIm === void 0 ? void 0 : (_data$post$featuredIm2 = _data$post$featuredIm.node) === null || _data$post$featuredIm2 === void 0 ? void 0 : _data$post$featuredIm2.sourceUrl;
   const postTitle = data === null || data === void 0 ? void 0 : (_data$post2 = data.post) === null || _data$post2 === void 0 ? void 0 : _data$post2.title;
   const content = data === null || data === void 0 ? void 0 : (_data$post3 = data.post) === null || _data$post3 === void 0 ? void 0 : _data$post3.content;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_main_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_main_layout__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 29,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1347,7 +1350,7 @@ const SinglePost = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 30,
       columnNumber: 7
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -1357,7 +1360,7 @@ const SinglePost = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 31,
       columnNumber: 9
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1365,7 +1368,7 @@ const SinglePost = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 32,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
@@ -1373,21 +1376,19 @@ const SinglePost = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
-      columnNumber: 11
-    }
-  }, postTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "card-text",
-    dangerouslySetInnerHTML: {
-      __html: content
-    },
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 33,
       columnNumber: 11
     }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, postTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_highlight__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    innerHTML: true,
+    className: "card-text",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 11
+    }
+  }, content)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-body",
     __self: undefined,
     __source: {
@@ -1410,7 +1411,7 @@ const SinglePost = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 43,
       columnNumber: 11
     }
   }, "Home Page"))));
@@ -1767,5 +1768,5 @@ module.exports = __webpack_require__(/*! /Users/shrijantripathi/projects/startup
 
 /***/ })
 
-},[[0,"runtime-main",0]]]);
+},[[0,"runtime-main",1]]]);
 //# sourceMappingURL=main.chunk.js.map
