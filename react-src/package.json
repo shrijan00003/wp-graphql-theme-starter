@@ -18,7 +18,7 @@
     "bootstrap-icons": "^1.0.0-alpha5",
     "graphql": "^15.2.0",
     "graphql-tag": "^2.10.3",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-apollo": "^3.1.5",
     "react-apollo-hooks": "^0.5.0",
